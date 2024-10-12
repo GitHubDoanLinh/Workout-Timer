@@ -7,7 +7,7 @@ function App() {
   const [time, setTime] = useState(formatTime(new Date()));
 
   // Will be be AM or PM
-  const partOfDay = time.slice(-2);
+  const partOfDay = time.includes("AM") || time.includes("PM") ? time.slice(-2) : "AM";
 
   const workouts = [
     {
